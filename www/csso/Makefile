@@ -13,7 +13,7 @@ COMMENT=	CSS optimizer
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	node:www/node
+USES+=		node:run
 
 GH_ACCOUNT=	css
 

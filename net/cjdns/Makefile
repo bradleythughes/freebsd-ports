@@ -12,13 +12,12 @@ COMMENT=	Routing engine designed for security, scalability, speed
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	node:www/node \
-		bash:shells/bash
+BUILD_DEPENDS=	bash:shells/bash
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cjdelisle
 
-USES=		gmake python
+USES=		gmake python node:build
 USE_RC_SUBR=	cjdns
 SUB_FILES=	cjdns pkg-message
 SUB_LIST=	LOCALBASE=${LOCALBASE}

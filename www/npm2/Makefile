@@ -43,9 +43,9 @@ SHEBANG_FILES=	lib/utils/completion.sh \
 		scripts/release.sh \
 		scripts/relocate.sh
 
-NODE_RUN_DEPENDS=	node>=0.8.0:www/node
-NODE4_RUN_DEPENDS=	node4>=0.8.0:www/node4
-NODE6_RUN_DEPENDS=	node6>=0.8.0:www/node6
+NODE_USES=	node:run
+NODE4_USES=	node:4,run
+NODE6_USES=	node:6,run
 
 .include <bsd.port.pre.mk>
 

@@ -27,7 +27,7 @@ NODE8_DESC=	Use Node.js 8.x (www/node8) as backend
 NO_ARCH=	yes
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ''
-USES=		cpe python:2,run shebangfix tar:xz
+USES=		cpe python:2,run shebangfix tar:xz node:run
 
 CPE_VENDOR=	npmjs
 CPE_PRODUCT=	node_packaged_modules
