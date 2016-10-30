@@ -16,7 +16,7 @@ _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes
 LOCALBASE?=	/usr/local
 
 .for lang in APACHE BDB FIREBIRD FORTRAN FPC GCC GHOSTSCRIPT LINUX LUA MYSQL \
-	PERL5 PGSQL PHP PYTHON PYTHON2 PYTHON3 RUBY SSL TCLTK
+	NODE PERL5 PGSQL PHP PYTHON PYTHON2 PYTHON3 RUBY SSL TCLTK
 .if defined(${lang}_DEFAULT)
 WARNING+=	"The variable ${lang}_DEFAULT is set and it should only be defined through DEFAULT_VERSIONS+=${lang:tl}=${${lang}_DEFAULT} in /etc/make.conf"
 WARNING+=	"This behaviour has never been supported and will be removed on 2017-01-31"
@@ -58,6 +58,8 @@ WARNING+=		"OVERRIDE_LINUX_BASE_PORT is deprecated, please use DEFAULT_VERSIONS+
 LUA_DEFAULT?=		5.2
 # Possible values: 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 10.2m, 5.5p, 5.6p, 5.7p, 5.6w
 MYSQL_DEFAULT?=		5.6
+# Possible values: 4, 6, 8, 9
+NODE_DEFAULT?=		9
 # Possible values: 5.22, 5.24, 5.26, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
